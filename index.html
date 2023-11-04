@@ -1,7 +1,165 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="author" content="I Wayan Giri Marditayasa">
+    <meta name="description" content="Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan. Berat badan juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di Kalkualtor BMI.">
+    <meta name="keywords" content="kalkulator, BMI, berat badan, obesitas, sehat, impian">
+  </head>
+  <body>
+    <!-- Banner section start -->
+    <div class="banner">
+      <div class="title-desc">
+        <h1>Kalkulator BMI</h1>
+        <p> Berat badan ideal adalah impian semua orang. Tidak hanya memiliki
+          bentuk tubuh yang menunjang penampilan. Berat badan juga menandakan
+          kondisi tubuh yang sehat. <br>
+          Bagaimana denganmu? Yuk, hitung sekarang di Kalkualtor BMI </p>
+      </div>
+    </div>
+    <!-- Banner section end -->
+    <!-- Main body start -->
+    <main>
+
+    <!-- Description section start -->
+    <div class="description">
+      <h3>Keunggulan fitur</h3>
+      <ol>
+        <li>Menghitung berat badan</li>
+        <li>Menentukan berat badan ideal atau tidak</li>
+        <li>Mempersiapkan program penurunan berat badan</li>
+      </ol>
+      <br>
+      <p> Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil
+        atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak
+        ada tindakan yang harus diambil berdasarkan nilainya selain
+        berkonsultasi dengan orang yang memenuhi syarat seperti dokter. </p>
+      <p> Kalkulator akan memberi Anda gambaran tentang perbandingan berat
+        badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung
+        sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi
+        badan Anda (dalam meter) atau BMI = Kg/Ms<sup>2</sup>. </p>
+    </div>
+    <!-- Description section start -->
+
+      <!-- Input data start -->
+      <div class="form">
+        <h2 id="gender">Jenis Kelamin</h2>
+        <!-- Radio button container start -->
+        <div class="radio-button"> <label class="gender"> <input class="radio"
+
+              id="male" name="gender" type="radio"> Laki-Laki <span></span> </label>
+        </div>
+        <div class="radio-button"> <label class="gender"> <input class="radio"
+
+              id="female" name="gender" type="radio"> Wanita <span></span> </label>
+        </div>
+        <!-- Radio button container start -->
+
+        <!-- User form input start -->
+        <form>
+          <!-- Weight data input start -->
+          <h2>Berat Badan</h2>
+          <label for="weight"> Berat Badan (kg)</label>
+          <div class="input-wrapper"> <input id="weight" placeholder="Input Berat Badan..."
+           min="30" max="200" class="number" type="number">
+          <div class="suffix">kg</div>
+          </div>
+          <div class="error-message"></div>
+          <!-- Weight data input start -->
+
+          <!-- Age data input start -->
+          <h2>Usia</h2>
+          <label for="age">Usia (tahun)</label>
+          <div class="input-wrapper"> <input id="age" placeholder="Input Usia..."
+            min="18" max="100" class="number" type="number">
+          <div class="suffix">tahun</div>
+          </div>
+          <div class="error-message"></div>
+          <!-- Age data input end -->
+
+          <!-- Height data input start -->
+          <h2>Tinggi Badan</h2>
+          <label for="height">Tinggi Badan (cm)</label>
+          <div class="input-wrapper"> <input id="height" placeholder="Input Tinggi Badan..."
+            min="100" max="250" class="number" type="number">
+          <div class="suffix">cm</div>
+          </div>
+          <div class="error-message"></div>
+          <!-- Height data input start --> </form>
+        <!-- User form input end -->
+
+        <!-- User warning start-->
+        <div class="required">
+          <h5 class="warning"></h5>
+        </div>
+        <!-- User warning end-->
+        <!-- Button start -->
+        <div class="form-button"> <button id="button-submit"> Hitung BMI <a href="#res"
+              class="cta"></a> </button> <button id="button-reset">Reset</button>
+        </div>
+        <!-- Button end --> </div>
+      <!-- Input data end -->
+      
+      <!-- Display section start -->
+      <section id="res">
+        <div class="box">
+          <!-- Result displat start -->
+          <h3>Hasil</h3>
+          <div class="result">
+            <div class="top"> <span id="sum-head">Belum ada Hasil</span> <br>
+              <span id="sum-info"></span> </div>
+            <div id="num"> <span id="sum-nums"></span> <span id="sum-cats"></span>
+            </div>
+            <div id="sum"> <span id="sum-sums"></span> </div>
+            <div class="bot"> <span id="sum-type"></span> <span id="sum-avgs"></span>
+              <span id="sum-unit"></span> <br>
+              <span id="suggestion"></span> </div>
+          </div>
+          <!-- Result display end -->
+
+          <!-- Additional part start -->
+          <div class="additional">
+            <div class="disclaimer">
+              <p> <span>DISCLAIMER: </span>BMI tidak sepenuhnya mewakili
+                diagnosisi menyeluruh dari kesehatan tubuh dan resiko penyakit
+                seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko
+                dan kekhawatiran Anda terkait dengan berat badan Anda </p>
+            </div>
+            <div class="effect">
+              <h3>Beberapa penyakit yang bisa disebabkan akibat kegemukan</h3>
+              <ul class="disease">
+                <li class="li-disease">Diabetes</li>
+                <li class="li-disease">Hipertensi</li>
+                <li class="li-disease">Sakit Jantung</li>
+                <li class="li-disease">Osteoarthritis</li>
+              </ul>
+            </div>
+            <div class="go-to"> <a href="">Konsultasi
+                Dokter via Aplikasi</a> <a href="">Registrasi
+                Online Sekarang</a> </div>
+            <div class="download-link">
+              <h5>Download Sekarang di</h5>
+              <div class="img-container">
+                <div class="img-google"> <img src="./resources/google-play.png"
+
+                    alt="Download now - Google Play"> </div>
+                <div class="img-apple"> <img src="./resources/app-store.png" alt="Download now - App Store">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Additional part end --> </div>
+      </section>
+      <!-- Display section end --> </main>
+    <!-- Main body end -->
+
+    <!-- Javascript source -->
+    <script src="./js/script.js"></script>
+    <div id="footer" class="text-center-footer">
+      <h5>Created by I Wayan Giri Marditayasa</h5>
+    </div>
+  </body>
 </html>
